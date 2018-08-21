@@ -64,7 +64,7 @@ func (target Target) String() string {
 
 // Pinger is a ping interface
 type Pinger interface {
-	Start() <-chan struct{}
+	Start(quiet bool) <-chan struct{}
 	Stop()
 	Result() *Result
 	SetTarget(target *Target)
